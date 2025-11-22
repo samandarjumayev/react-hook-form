@@ -1,5 +1,5 @@
-import { ArrowRight, Code2, MoveRight } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { ArrowRight, Code2, LogOut, MoveRight } from "lucide-react";
+import { Navigate, NavLink } from "react-router-dom";
 
 export default function Header(){
     return <div className="bg-[#080720] w-full h-[70px] text-white">
@@ -13,7 +13,10 @@ export default function Header(){
                 <NavLink to={'/'} className={({isActive}) => isActive ? `text-cyan-300` : ``}>Home</NavLink>
                 <NavLink to={'/about'} className={({isActive}) => isActive ? `text-cyan-300` : ``}>About</NavLink>
                 <NavLink to={'allproducts'} className={({isActive}) => isActive ? `text-cyan-300` : ``}>All Products</NavLink>
-                <NavLink to={'/login'} className={`bg-blue-500 py-1 px-4 rounded-lg flex items-center gap-2`}>Login <ArrowRight size={20} /></NavLink>
+                <button onClick={() => {
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('isAuth');
+                }} className={`text-red-500 py-1 px-4 rounded-lg flex items-center gap-2 transition-all duration-150 active:duration-50 active:scale-95 cursor-pointer`}>Logout <LogOut /></button>
             </div>
         </div>
     </div>
