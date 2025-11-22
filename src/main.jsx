@@ -7,9 +7,9 @@ import ProtectedRouter from './Protected/ProtectedRouter.jsx'
 import Login from './auth/Login.jsx'
 import AllProducts from './components/AllProducts.jsx'
 import Home from './components/Home.jsx'
+import Profile from './components/Profile.jsx'
 import { Provider } from 'react-redux'
 import { store } from './store.js'
-import Profile from './components/Profile.jsx'
 
 const router = createBrowserRouter([
   {

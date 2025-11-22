@@ -24,7 +24,7 @@ export default function AllProducts(){
         </div>
     }
 
-    return <div className="max-w-[1020px] px-[10px] mx-auto h-[calc(100vh-70px)] overflow-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 py-5">
+    return <div className="max-w-[1030px] px-[15px] mx-auto h-[calc(100vh-70px)] overflow-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 py-5">
         {users.map(item => {
             return <div key={item.id} className="h-[310px] relative border border-gray-400 rounded flex flex-col shadow-lg cursor-context-menu transition-all duration-150 hover:duration-75 hover:scale-103">
                 <div className="w-full h-[170px]">
