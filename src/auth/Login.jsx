@@ -13,11 +13,13 @@ export default function Login(){
         initialValues,
         validationSchema: loginSchema,
         onSubmit: (value) => {
-            console.log(value)
+            console.log(value);
+            localStorage.setItem('data', JSON.stringify(value))
+            localStorage.setItem('token', true)
         }
     })
 
-    console.log(values)
+    // console.log(values)
 
     return <div className="w-full h-screen bg-zinc-700 flex items-center justify-center">
         <form action="" onSubmit={handleSubmit} className="bg-white rounded w-[450px] py-5 px-5 flex flex-col gap-2">
