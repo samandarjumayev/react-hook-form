@@ -11,8 +11,8 @@ export default function Header(){
 
             <div className="h-full flex items-center gap-7 text-[18px]">
                 <NavLink to={'/'} className={({isActive}) => isActive ? `text-cyan-300` : ``}>Home</NavLink>
-                <NavLink to={'/about'} className={({isActive}) => isActive ? `text-cyan-300` : ``}>About</NavLink>
-                <NavLink to={'allproducts'} className={({isActive}) => isActive ? `text-cyan-300` : ``}>All Products</NavLink>
+                <NavLink to={'/allproducts'} className={({isActive}) => isActive ? `text-cyan-300` : ``}>All Products</NavLink>
+                <NavLink to={'/profile'} className={({isActive}) => isActive ? `text-cyan-300` : ``}>Profile</NavLink>
                 <button onClick={() => {
                     localStorage.removeItem('data');
                     localStorage.removeItem('token');
